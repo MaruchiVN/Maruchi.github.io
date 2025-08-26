@@ -1,0 +1,25 @@
+/* SplitText Animation Styles */
+.split-text-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.split-char {
+    display: inline-block;
+    will-change: transform, opacity;
+    transform-origin: center bottom;
+}
+
+/* Enhanced animation for Maruchi_VN title */
+.font-signika.font-bold.text-3xl {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+/* Optimize performance for animations */
+* {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

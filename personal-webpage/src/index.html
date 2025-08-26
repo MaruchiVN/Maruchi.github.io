@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruchi_VN</title>
+    <meta name="description" content="Maruchi_VN Profile">
+
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.34.0/tabler-icons.min.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'signika': ['Signika', 'sans-serif'],
+                        'space-mono': ['Space Mono', 'monospace'],
+                        'sans': ['Signika', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#667eea',
+                        'secondary': '#764ba2'
+                    },
+                    animation: {
+                        'slideInUp': 'slideInUp 0.6s ease-out both',
+                        'fadeIn': 'fadeIn 0.8s ease-out both'
+                    },
+                    keyframes: {
+                        slideInUp: {
+                            'from': {
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+                            'to': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        },
+                        fadeIn: {
+                            'from': { opacity: '0' },
+                            'to': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Maruchi_VN">
+    <meta property="og:description" content="Full-Stack Developer chuyên về Laravel, NuxtJS, Python, HonoJS, Node.js, MySQL, PostgreSQL, Redis">
+    <meta property="og:image" content="assets/avatar.jpg">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="loaded">
+    <div class="min-h-screen py-8 relative bg-zinc-100 pt-20">
+
+        <div class="max-w-4xl mx-auto px-4 md:px-8 relative ">
+            <div class="border-zinc-200 bg-white rounded-2xl relative shadow-sm overflow-hidden animate-slideInUp">
+                <!-- Profile Header với Avatar -->
+                <div class="bg-zinc-50 p-4 md:p-6 text-center relative border-b border-slate-100/50">
+                    <img src="assets/avatar.jpg" alt="Maruchi_VN Profile Avatar" class="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white/80 mx-auto block transition-transform duration-300 hover:scale-105 animate-fadeIn shadow-lg">
+                </div>
+
+                <!-- Profile Body với nội dung chính -->
+                <div class="p-4 md:p-8">
+                    <div class="font-signika font-bold text-3xl md:text-4xl text-slate-900 text-center mb-3 animate-slideInUp" style="animation-delay: 0.4s;">
+                        <span id="animated-title">Maruchi_VN</span>
+                    </div>
+                    <div class="text-center text-base md:text-lg font-normal text-slate-600 mb-8 animate-slideInUp" style="animation-delay: 0.5s;">Developer, Designed</div>
+
+                    <div class="text-sm md:text-base leading-relaxed text-slate-700 text-center max-w-2xl mx-auto mb-10 animate-slideInUp" style="animation-delay: 0.6s;">
+                        Hii! Mình là Maruchi, một lập trình viên Full-Stack tiềm năng và có biết về Design.
+                        Luôn tìm kiếm những thách thức mới và cơ hội hợp tác trong các dự án công nghệ đột phá.
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="mb-10 animate-slideInUp" style="animation-delay: 0.7s;">
+                        <h3 class="text-xl font-semibold text-slate-900 text-center mb-6">Chuyên môn</h3>
+                        <div class="flex flex-wrap gap-2 md:gap-3 justify-center mb-8">
+                            <span class="bg-white/80 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200/50 transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">Python</span>
+                            <span class="bg-white/80 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200/50 transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">C++</span>
+                            <span class="bg-white/80 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200/50 transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">HTML</span>
+                            <span class="bg-white/80 text-slate-700 px-4 py-2 rounded-xl text-sm font-medium border border-slate-200/50 transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900 hover:scale-105 hover:shadow-lg hover:-translate-y-1 cursor-pointer">CSS</span>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Section -->
+                    <div class="mb-10 animate-slideInUp" style="animation-delay: 0.8s;">
+                        <h3 class="text-xl font-semibold text-slate-900 text-center mb-8">Dự Án Đã Thực Hiện</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
+                            <!-- Project 1 -->
+                            <div class="rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl relative shadow-sm border border-slate-200/50 bg-white">
+                                <div class="w-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative">
+                                    <div class="w-full h-full aspect-video flex items-center justify-center text-white text-2xl font-bold">
+                                        Dự án 1
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án mẫu 1</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                        Mô tả dự án đầu tiên của bạn sẽ được hiển thị ở đây.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">HTML</span>
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">CSS</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-2">
+                                        <button onclick="showNoProjectMessage()" class="flex-1 text-center py-2 px-4 bg-slate-900 text-white rounded-xl text-sm font-medium transition-all duration-300 hover:bg-slate-800 flex items-center justify-center gap-2 cursor-pointer">
+                                            <i class="ti ti-external-link text-xs" aria-hidden="true"></i>
+                                            <span>Xem Demo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div class="rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl relative shadow-sm border border-slate-200/50 bg-white">
+                                <div class="w-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center relative">
+                                    <div class="w-full h-full aspect-video flex items-center justify-center text-white text-2xl font-bold">
+                                        Dự án 2
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án mẫu 2</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                        Mô tả dự án thứ hai của bạn sẽ được hiển thị ở đây.
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">HTML</span>
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">CSS</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-2">
+                                        <button onclick="showNoProjectMessage()" class="flex-1 text-center py-2 px-4 bg-slate-900 text-white rounded-xl text-sm font-medium transition-all duration-300 hover:bg-slate-800 flex items-center justify-center gap-2 cursor-pointer">
+                                            <i class="ti ti-external-link text-xs" aria-hidden="true"></i>
+                                            <span>Xem Demo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Stats Section -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-6 border rounded-2xl border-slate-200/50">
+                        <div class="text-center">
+                            <span class="font-space-mono text-2xl font-bold text-slate-900 block mb-1">0+</span>
+                            <span class="text-sm text-slate-600 font-medium">Năm kinh nghiệm</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-space-mono text-2xl font-bold text-slate-900 block mb-1">1+</div>
+                            <span class="text-sm text-slate-600 font-medium">Dự án hoàn thành</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="text-center pt-8 border-slate-200/50 animate-slideInUp" style="animation-delay: 0.9s;">
+                        <div class="mb-6">
+                            <a href="mailto:ducanh80022161@gmail.com" aria-label="Gửi email cho Maruchi_VN">
+                                <div class="inline-flex items-center gap-3 font-semibold text-base text-white bg-slate-900 px-6 py-3 rounded-xl transition-all duration-300 hover:bg-slate-800 border-none">
+                                    <i class="ti ti-mail text-base" aria-hidden="true"></i>
+                                    <span>Liên hệ qua Email</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="flex gap-4 justify-center">
+                            <a class="w-12 h-12 bg-white/80 border border-slate-200/50 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-slate-900 hover:border-slate-900 group" href="https://github.com/MaruchiVN" aria-label="GitHub của Maruchi_VN" target="_blank" rel="noopener noreferrer">
+                                <i class="ti ti-brand-github text-lg text-slate-600 group-hover:text-white transition-colors duration-300" aria-hidden="true"></i>
+                            </a>
+                            <a class="w-12 h-12 bg-white/80 border border-slate-200/50 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-slate-900 hover:border-slate-900 group" href="https://www.facebook.com/DucAnhNguyen6822/" aria-label="Facebook của Maruchi_VN" target="_blank" rel="noopener noreferrer">
+                                <i class="ti ti-brand-facebook text-lg text-slate-600 group-hover:text-white transition-colors duration-300" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-slate-600 p-6 text-center font-normal border-t border-slate-200/50 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <p class="m-0 text-sm">
+                Copyright
+                <i class="ti ti-copyright text-slate-900" aria-hidden="true"></i>
+                <script>document.write(new Date().getFullYear());</script> 2025 - 
+                Designed by Maruchi_VN
+            </p>
+        </div>
+    </footer>
+
+    <!-- SplitText Animation Script -->
+    <script src="scripts/simple-split-text.js"></script>
+    
+    <!-- JavaScript cho smooth interactions -->
+    <script>
+        // Function to show no project message
+        function showNoProjectMessage() {
+            alert('Hiện chưa có dự án nào để cho bạn xem cả :((');
+        }
+        
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Counter animation cho stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace('+', ''));
+                const increment = target / 50;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.ceil(current) + '+';
+                    }
+                }, 30);
+            });
+        }
+        
+        // Trigger counter animation khi scroll đến stats section
+        const observerOptions = {
+            threshold: 0.5,
+            once: true
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Start observing khi DOM loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.querySelector('.stats-section');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        });
+        
+        // Add loading class
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Portfolio cards stagger animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const portfolioCards = document.querySelectorAll('.portfolio-card');
+            portfolioCards.forEach((card, index) => {
+                card.style.animationDelay = `${0.9 + index * 0.1}s`;
+                card.style.animation = 'slideInUp 0.6s ease-out both';
+            });
+        });
+
+
+    </script>
+
+</body>
+</html>
