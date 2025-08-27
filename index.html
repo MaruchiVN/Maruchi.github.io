@@ -54,10 +54,19 @@
     </script>
     
     <!-- Meta tags for social sharing -->
+    <!-- CHỈNH 3 DÒNG DƯỚI NÀY ĐỂ ĐỔI TIÊU ĐỀ, MÔ TẢ VÀ ẢNH KHI SHARE LINK -->
     <meta property="og:title" content="Maruchi_VN">
-    <meta property="og:description" content="Full-Stack Developer chuyên về Laravel, NuxtJS, Python, HonoJS, Node.js, MySQL, PostgreSQL, Redis">
-    <meta property="og:image" content="assets/avatar.jpg">
+    <meta property="og:description" content="Một người yêu thích trở thành Developer và Designer.">
+    <meta property="og:image" content="assets/Cover.jpg">
+    <!-- Tuỳ chọn: nếu có domain chính thức, điền URL dưới đây -->
+    <meta property="og:url" content="">
     <meta property="og:type" content="website">
+
+    <!-- Twitter Card (hiển thị đẹp trên Twitter/X, Zalo, Telegram, v.v.) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maruchi_VN">
+    <meta name="twitter:description" content="Một người yêu thích trở thành Developer và Designer.">
+    <meta name="twitter:image" content="assets/Cover.jpg">
 </head>
 
 <body class="loaded">
@@ -69,13 +78,18 @@
                 <div class="bg-zinc-50 p-4 md:p-6 text-center relative border-b border-slate-100/50">
                     <img src="assets/avatar.jpg" alt="Maruchi_VN Profile Avatar" class="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white/80 mx-auto block transition-transform duration-300 hover:scale-105 animate-fadeIn shadow-lg">
                 </div>
+                
+                <!-- Featured Image -->
+                <div class="p-4 md:p-6">
+                    <img src="assets/Cover.jpg" alt="Maruchi_VN Featured Cover" class="w-full rounded-2xl object-cover shadow-sm" style="max-height: 360px;">
+                </div>
 
                 <!-- Profile Body với nội dung chính -->
                 <div class="p-4 md:p-8">
                     <div class="font-signika font-bold text-3xl md:text-4xl text-slate-900 text-center mb-3 animate-slideInUp" style="animation-delay: 0.4s;">
                         <span id="animated-title">Maruchi_VN</span>
                     </div>
-                    <div class="text-center text-base md:text-lg font-normal text-slate-600 mb-8 animate-slideInUp" style="animation-delay: 0.5s;">Developer, Designed</div>
+                    <div class="text-center text-base md:text-lg font-normal text-slate-600 mb-8 animate-slideInUp" style="animation-delay: 0.5s;">Full-Stack Developer</div>
 
                     <div class="text-sm md:text-base leading-relaxed text-slate-700 text-center max-w-2xl mx-auto mb-10 animate-slideInUp" style="animation-delay: 0.6s;">
                         Hii! Mình là Maruchi, một lập trình viên Full-Stack tiềm năng và có biết về Design.
@@ -211,65 +225,10 @@
         // Smooth scroll behavior
         document.documentElement.style.scrollBehavior = 'smooth';
         
-        // Counter animation cho stats
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            
-            counters.forEach(counter => {
-                const target = parseInt(counter.textContent.replace('+', ''));
-                const increment = target / 50;
-                let current = 0;
-                
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        counter.textContent = target + '+';
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = Math.ceil(current) + '+';
-                    }
-                }, 30);
-            });
-        }
-        
-        // Trigger counter animation khi scroll đến stats section
-        const observerOptions = {
-            threshold: 0.5,
-            once: true
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        // Start observing khi DOM loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                observer.observe(statsSection);
-            }
-        });
-        
         // Add loading class
         window.addEventListener('load', () => {
             document.body.classList.add('loaded');
         });
-
-        // Portfolio cards stagger animation
-        document.addEventListener('DOMContentLoaded', () => {
-            const portfolioCards = document.querySelectorAll('.portfolio-card');
-            portfolioCards.forEach((card, index) => {
-                card.style.animationDelay = `${0.9 + index * 0.1}s`;
-                card.style.animation = 'slideInUp 0.6s ease-out both';
-            });
-        });
-
-
     </script>
 
 </body>
