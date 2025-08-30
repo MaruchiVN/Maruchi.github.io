@@ -106,23 +106,22 @@
 
                     <!-- Portfolio Section -->
                     <div class="mb-10 animate-slideInUp" style="animation-delay: 0.8s;">
-                        <h3 class="text-xl font-semibold text-slate-900 text-center mb-8">Dự Án Mình Đã Làm</h3>
+                        <h3 class="text-xl font-semibold text-slate-900 text-center mb-2">Dự Án Mình Đã Làm</h3>
+                        <p class="text-sm text-slate-500 text-center mb-8">(Dự án bao gồm banner, web, logo, avt,...)</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8">
                             <!-- Project 1 -->
                             <div class="rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl relative shadow-sm border border-slate-200/50 bg-white">
-                                <div class="w-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative">
-                                    <div class="w-full h-full aspect-video flex items-center justify-center text-white text-2xl font-bold">
-                                        Dự án 1
-                                    </div>
+                                <div class="w-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative rounded-t-2xl">
+                                    <img src="assets/qrm-duan1.jpg" alt="Des Qr Project" class="w-full h-full aspect-video object-cover rounded-t-2xl">
                                 </div>
                                 <div class="p-4">
-                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án mẫu 1</h4>
+                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Des Qr</h4>
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                        (none).
+                                        Các Mẫu Qr id: tùm lum
                                     </p>
                                     <div class="flex flex-wrap gap-1.5 mb-4">
-                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">HTML</span>
-                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">CSS</span>
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">Canva</span>
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">Pts</span>
                                     </div>
                                     <div class="flex flex-col sm:flex-row gap-2">
                                         <button onclick="showNoProjectMessage()" class="flex-1 text-center py-2 px-4 bg-slate-900 text-white rounded-xl text-sm font-medium transition-all duration-300 hover:bg-slate-800 flex items-center justify-center gap-2 cursor-pointer">
@@ -135,13 +134,13 @@
 
                             <!-- Project 2 -->
                             <div class="rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl relative shadow-sm border border-slate-200/50 bg-white">
-                                <div class="w-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center relative">
+                                <div class="w-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center relative rounded-t-2xl">
                                     <div class="w-full h-full aspect-video flex items-center justify-center text-white text-2xl font-bold">
                                         Dự án 2
                                     </div>
                                 </div>
                                 <div class="p-4">
-                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án mẫu 2</h4>
+                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án 2</h4>
                                     <p class="text-sm text-slate-600 leading-relaxed mb-4">
                                         (none).
                                     </p>
@@ -159,6 +158,67 @@
                             </div>
 
                         </div>
+                        
+                        <!-- Additional Projects (Hidden by default) -->
+                        <div id="additional-projects" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 hidden" style="display: none;">
+                            <!-- Project 3 -->
+                            <div class="rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl relative shadow-sm border border-slate-200/50 bg-white">
+                                <div class="w-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center relative rounded-t-2xl">
+                                    <div class="w-full h-full aspect-video flex items-center justify-center text-white text-2xl font-bold">
+                                        Dự án 3
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án 3</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                        (none).
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">JavaScript</span>
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">React</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-2">
+                                        <button onclick="showNoProjectMessage()" class="flex-1 text-center py-2 px-4 bg-slate-900 text-white rounded-xl text-sm font-medium transition-all duration-300 hover:bg-slate-800 flex items-center justify-center gap-2 cursor-pointer">
+                                            <i class="ti ti-external-link text-xs" aria-hidden="true"></i>
+                                            <span>Xem Demo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 4 -->
+                            <div class="rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl relative shadow-sm border border-slate-200/50 bg-white">
+                                <div class="w-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center relative rounded-t-2xl">
+                                    <div class="w-full h-full aspect-video flex items-center justify-center text-white text-2xl font-bold">
+                                        Dự án 4
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h4 class="text-lg font-semibold text-slate-900 mb-3">Dự án 4</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                                        (none).
+                                    </p>
+                                    <div class="flex flex-wrap gap-1.5 mb-4">
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">Node.js</span>
+                                        <span class="bg-slate-100/80 text-slate-700 px-2 py-1 rounded-lg text-xs font-medium">MongoDB</span>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-2">
+                                        <button onclick="showNoProjectMessage()" class="flex-1 text-center py-2 px-4 bg-slate-900 text-white rounded-xl text-sm font-medium transition-all duration-300 hover:bg-slate-800 flex items-center justify-center gap-2 cursor-pointer">
+                                            <i class="ti ti-external-link text-xs" aria-hidden="true"></i>
+                                            <span>Xem Demo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Show More Button -->
+                        <div class="text-center mb-8">
+                            <button id="show-more-btn" onclick="toggleProjects()" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-slate-800 hover:scale-105 cursor-pointer">
+                                <span id="btn-text">Xem thêm dự án</span>
+                                <i id="arrow-icon" class="ti ti-chevron-down text-lg transition-transform duration-300" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Stats Section -->
@@ -168,7 +228,7 @@
                             <span class="text-sm text-slate-600 font-medium">Năm kinh nghiệm</span>
                         </div>
                         <div class="text-center">
-                            <div class="font-space-mono text-2xl font-bold text-slate-900 block mb-1">1+</div>
+                            <div class="font-space-mono text-2xl font-bold text-slate-900 block mb-1">4+</div>
                             <span class="text-sm text-slate-600 font-medium">Dự án đã hoàn thành</span>
                         </div>
                     </div>
@@ -217,6 +277,49 @@
         // Function to show no project message
         function showNoProjectMessage() {
             alert('Hiện chưa có dự án nào để cho bạn xem cả :((');
+        }
+        
+        // Function to toggle additional projects
+        function toggleProjects() {
+            const additionalProjects = document.getElementById('additional-projects');
+            const btnText = document.getElementById('btn-text');
+            const arrowIcon = document.getElementById('arrow-icon');
+            
+            if (additionalProjects.classList.contains('hidden')) {
+                // Show additional projects with smooth animation
+                additionalProjects.classList.remove('hidden');
+                additionalProjects.style.display = 'grid';
+                
+                // Add show class for smooth animation
+                setTimeout(() => {
+                    additionalProjects.classList.add('show');
+                }, 10);
+                
+                btnText.textContent = 'Thu gọn dự án';
+                arrowIcon.style.transform = 'rotate(180deg)';
+                
+                // Smooth scroll to show more projects
+                setTimeout(() => {
+                    additionalProjects.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
+                    });
+                }, 600);
+            } else {
+                // Hide additional projects with smooth animation
+                additionalProjects.classList.remove('show');
+                additionalProjects.classList.add('hide');
+                
+                // Wait for animation to complete then hide
+                setTimeout(() => {
+                    additionalProjects.classList.add('hidden');
+                    additionalProjects.style.display = 'none';
+                    additionalProjects.classList.remove('hide');
+                }, 600);
+                
+                btnText.textContent = 'Xem thêm dự án';
+                arrowIcon.style.transform = 'rotate(0deg)';
+            }
         }
         
         // Smooth scroll behavior
