@@ -17,6 +17,104 @@
     text-align: center;
 }
 
+/* Portfolio Projects Toggle Animations */
+#additional-projects {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 0;
+    overflow: visible;
+}
+
+#additional-projects.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+    overflow: visible;
+}
+
+#additional-projects.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Individual project card animations */
+#additional-projects .rounded-2xl {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#additional-projects.show .rounded-2xl {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+#additional-projects.show .rounded-2xl:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+#additional-projects.show .rounded-2xl:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+/* Preserve hover effects for all project cards */
+#additional-projects .rounded-2xl:hover {
+    transform: scale(1.05) translateY(-1px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Separate transitions for different states */
+#additional-projects .rounded-2xl {
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Ensure all project cards have consistent hover effects */
+.rounded-2xl.overflow-hidden.transition-all.duration-300.hover\:scale-105.hover\:shadow-xl {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: visible !important;
+}
+
+.rounded-2xl.overflow-hidden.transition-all.duration-300.hover\:scale-105.hover\:shadow-xl:hover {
+    transform: scale(1.05) translateY(-1px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    z-index: 10 !important;
+}
+
+/* Fix overflow for all project cards */
+.rounded-2xl.overflow-hidden {
+    overflow: visible !important;
+}
+
+/* Ensure hover effects work properly */
+.rounded-2xl:hover {
+    z-index: 20 !important;
+}
+
+/* Button animations */
+#show-more-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#arrow-icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth fade in/out for button text */
+#btn-text {
+    transition: opacity 0.3s ease;
+}
+
 /* Optimize performance for animations */
 * {
     backface-visibility: hidden;
