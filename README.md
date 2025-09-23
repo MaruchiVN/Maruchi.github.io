@@ -1,33 +1,45 @@
-# Personal Webpage
+# Project
 
-This project is a personal webpage designed to showcase an individual's avatar and name with a light blue color theme and a blurred background image.
+This is a static personal site with an optional backend for AI chat.
 
-## Project Structure
+## Run the backend locally
+
+1. Create a `.env` next to `server.js`:
 
 ```
-personal-webpage
-├── src
-│   ├── index.html        # Main HTML document for the personal webpage
-│   ├── styles
-│   │   └── main.css      # CSS styles for the webpage
-│   └── assets
-│       ├── background.jpg # Background image with blur effect
-│       └── avatar.jpg     # User's avatar image
-└── README.md             # Documentation for the project
+PORT=3000
+OPENAI_API_KEY=sk-xxxx
+# Optional if using a different OpenAI-compatible endpoint
+# OPENAI_BASE_URL=https://api.openai.com/v1
 ```
 
-## Setup Instructions
+2. Install deps and start:
 
-1. Clone the repository to your local machine.
-2. Navigate to the `personal-webpage` directory.
-3. Open `src/index.html` in a web browser to view the personal webpage.
+```
+npm install
+npm run dev
+```
 
-## Features
+3. Point the frontend to the API in `index.html`:
 
-- Light blue color theme for a calming aesthetic.
-- Blurred background image for a modern look.
-- Central rectangular frame displaying the user's avatar and name.
+```
+<script>
+  window.CHAT_API_URL = 'http://localhost:3000/api/chat';
+</script>
+```
 
-## Usage
+## Deploy backend to a third-party host
 
-Feel free to customize the avatar and background images by replacing `src/assets/avatar.jpg` and `src/assets/background.jpg` with your own images. Adjust the styles in `src/styles/main.css` to personalize the appearance further.
+- Push the repo to GitHub.
+- Create a Node app on your host (Render/Railway/Fly/Heroku):
+  - Start command: `node server.js`
+  - Env vars: `OPENAI_API_KEY`, optional `OPENAI_BASE_URL`, `PORT` auto-set by host
+- Set in `index.html`:
+
+```
+<script>
+  window.CHAT_API_URL = 'https://your-app.example.com/api/chat';
+</script>
+```
+
+If `window.CHAT_API_URL` is not set, the UI will fall back to embedding `window.CHAT_URL` (defaults to `https://chat.openai.com/`).
