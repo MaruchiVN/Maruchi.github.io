@@ -136,8 +136,6 @@
     clip-path: inset(0 0 0 0);
 }
 
-#chat-fab .svg-wrapper-1 { }
-
 #chat-fab .svg-wrapper {
     transform-origin: center center;
     transition: transform 0.3s ease-in-out;
