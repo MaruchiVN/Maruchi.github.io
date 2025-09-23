@@ -260,7 +260,7 @@
         </div>
     </div>
     
-    <footer class="text-slate-600 p-6 text-center font-normal border-t border-slate-200/50 bg-white">
+    <footer class="text-slate-600 p-6 text-center font-normal border-t border-slate-200/50 bg-white relative">
         <div class="max-w-4xl mx-auto">
             <p class="m-0 text-sm">
                 Copyright
@@ -269,10 +269,55 @@
                 Designed by Maruchi_VN
             </p>
         </div>
+        <img src="assets/Logo.png" alt="Logo" class="absolute right-4 -bottom-[2px] h-16 md:h-20 w-auto opacity-90" />
     </footer>
 
     <!-- SplitText Animation Script -->
     <script src="scripts/simple-split-text.js"></script>
+    
+    <!-- Floating Chat Button -->
+    <div id="chat-fab-wrap" class="fixed bottom-6 right-6 z-50 relative">
+        <span class="pointer-events-none absolute -inset-1 rounded-2xl border border-white/40"></span>
+        <!-- From Uiverse.io by Peary74 (scoped and adapted) -->
+        <button id="chat-fab" aria-label="Chat với AI"
+            class="relative rounded-xl bg-slate-900 text-white shadow-lg shadow-slate-900/20 flex items-center cursor-pointer select-none px-4 py-3">
+            <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
+                    <i class="ti ti-message icon text-[28px] leading-none" aria-hidden="true"></i>
+                </div>
+            </div>
+            <span class="ml-1 font-extrabold tracking-wide text-sm">CHAT</span>
+        </button>
+    </div>
+
+    <!-- Chat Panel (expands from button, bottom-right) -->
+    <div id="chat-panel" class="fixed z-50 bottom-6 right-6 hidden" aria-hidden="true" role="dialog" aria-label="Chat Gemini">
+        <div class="chat-panel-inner bg-white rounded-2xl shadow-xl border border-slate-200/60 overflow-hidden">
+            <div class="flex items-center justify-between px-3 py-2 border-b border-slate-200/60 bg-white/90">
+                <div class="flex items-center gap-2 text-slate-700 text-sm font-semibold">
+                    <i class="ti ti-message-dots" aria-hidden="true"></i>
+                    <span>Gemini Chat</span>
+                </div>
+                <button id="chat-close" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-500 hover:text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Đóng chat">
+                    <i class="ti ti-x" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="chat-panel-body bg-white">
+                <div id="chat-messages" class="hidden w-full h-full overflow-auto p-3 space-y-2 bg-white"></div>
+                <iframe id="chat-iframe" title="Gemini" class="w-full h-full" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+                <div id="chat-fallback" class="hidden p-4 text-sm text-slate-600">
+                    Không thể nhúng chat trong trang này. 
+                    <a id="chat-open-new" href="#" target="_blank" rel="noopener" class="text-slate-900 font-semibold underline">Mở trong tab mới</a>.
+                </div>
+            </div>
+            <div class="chat-panel-footer px-3 py-2 border-t border-slate-200/60 bg-white/95 flex items-center gap-2">
+                <input id="chat-input" type="text" class="flex-1 text-sm px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Nhập tin nhắn..." aria-label="Nhập tin nhắn">
+                <button id="chat-send" class="w-9 h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center hover:bg-slate-800" aria-label="Gửi">
+                    <i class="ti ti-arrow-up" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
     
     <!-- JavaScript cho smooth interactions -->
     <script>
@@ -332,6 +377,14 @@
             document.body.classList.add('loaded');
         });
     </script>
+    
+    <!-- Chat Widget Script (configurable via window.CHAT_URL or window.CHAT_API_URL) -->
+    <script>
+        // If deploying backend, set CHAT_API_URL to your server endpoint, e.g. 'https://your-host/api/chat'
+        // window.CHAT_API_URL = 'http://localhost:3000/api/chat';
+        window.CHAT_URL = window.CHAT_URL || 'https://chat.openai.com/';
+    </script>
+    <script src="scripts/chat-widget.js"></script>
 
 </body>
 </html>
