@@ -121,3 +121,77 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/* Chat FAB (Uiverse-style) hover interactions */
+#chat-fab {
+    font-family: inherit;
+    overflow: hidden;
+    border: none;
+}
+
+#chat-fab span {
+    display: block;
+    margin-left: 0.4em;
+    transition: clip-path 0.5s ease, opacity 0.5s ease;
+    clip-path: inset(0 0 0 0);
+}
+
+#chat-fab .svg-wrapper-1 { }
+
+#chat-fab .svg-wrapper {
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#chat-fab:hover {
+    background: #000;
+}
+
+#chat-fab:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+}
+
+#chat-fab .icon {
+    display: block;
+    transform-origin: center center;
+    transform: translateY(1px) scale(0.9);
+    transition: transform 0.35s ease;
+}
+
+#chat-fab:hover .icon {
+    transform: translateY(0) translateX(0.8em) scale(1);
+}
+
+#chat-fab:hover span {
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+}
+
+#chat-fab:active {
+    transform: scale(0.95);
+}
+
+/* Chat panel: expand from FAB position */
+#chat-panel {
+    transform-origin: bottom right;
+}
+
+#chat-panel .chat-panel-inner {
+    width: 360px;
+    height: 520px;
+    transform-origin: bottom right;
+    transform: scale(0.2);
+    opacity: 0;
+    transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+}
+
+#chat-panel.open .chat-panel-inner {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#chat-panel .chat-panel-body {
+    width: 100%;
+    height: calc(100% - 44px - 48px);
+}
